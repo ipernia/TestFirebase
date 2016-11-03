@@ -56,16 +56,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = editTextPassword.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(this, "Porfavor, introduce el email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Por favor, introduce el email", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Porfavor, introduce el password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Por favor, introduce el password", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        progressDialog.setMessage("Regristrando usuaio...");
+        progressDialog.setMessage("Registrando usuario...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email, password)
